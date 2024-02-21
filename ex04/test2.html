@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="title">이벤트 두 번째 버전</h1>
+    <hr>
+    <button id="btn-change">김성재</button>
+
+    <script>
+        let btn = document.querySelector("#btn-change");
+        //btn.addEventListener("click", changeTitle); // 인수가 두 개 있음
+        btn.addEventListener("mouseover", changeTitle);
+
+        let num = -1;
+        function changeTitle(e) {
+            console.log(e);
+            //alert(e.target.innerHTML);
+            let title = document.querySelector("#title");
+            num = num * -1;
+            title.innerHTML = num;
+
+        }
+
+    </script>
+</body>
+
+</html>
